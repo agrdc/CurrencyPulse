@@ -24,3 +24,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "CurrencyPulse"
 include(":app")
+include(":core:model")
+include(":core:database")
+include(":core:network")
+include(":core:ui")

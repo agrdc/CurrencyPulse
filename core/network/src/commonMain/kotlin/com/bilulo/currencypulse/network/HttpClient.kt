@@ -9,12 +9,10 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
 /**
- * Platform-agnostic HTTP client factory.
+ * Platform-agnostic HTTP client factory function.
  * Actual implementation is provided by platform-specific expect/actual declarations.
  */
-expect class KtorClientFactory {
-    fun createClient(): HttpClient
-}
+expect fun createHttpClient(): HttpClient
 
 /**
  * Common HTTP client configuration function.

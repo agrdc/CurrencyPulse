@@ -14,9 +14,9 @@ sealed class NetworkResult<out T> {
  * This will be expanded based on actual error handling requirements.
  */
 sealed class NetworkError {
-    data class HttpError(val code: Int) : NetworkError()
-    data class NoConnectionError : NetworkError()
-    data class TimeoutError : NetworkError()
-    data class SerializationError : NetworkError()
-    data class UnknownError : NetworkError()
+    data class HttpError(val code: Int, val message: String) : NetworkError()
+    data object NoConnectionError : NetworkError()
+    data object TimeoutError : NetworkError()
+    data object SerializationError : NetworkError()
+    data class UnknownError(val message: String) : NetworkError()
 }

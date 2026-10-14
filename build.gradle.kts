@@ -1,4 +1,4 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Top-level build file where you can add configuration options common to all subprojects/modules.
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.android.library) apply false
@@ -9,12 +9,4 @@ plugins {
     alias(libs.plugins.compose.multiplatform) apply false
     alias(libs.plugins.ksp) apply false
     id("com.google.gms.google-services") version "4.4.2" apply false
-}
-
-allprojects {
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask<*>>().configureEach {
-        compilerOptions {
-            freeCompilerArgs.add("-Xexpect-actual-classes")
-        }
-    }
 }

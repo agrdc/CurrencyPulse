@@ -5,7 +5,7 @@ plugins {
 }
 
 kotlin {
-    android {
+    androidLibrary {
         namespace = "com.bilulo.currencypulse.network"
         compileSdk = 37
         minSdk = 24

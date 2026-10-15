@@ -6,7 +6,7 @@ plugins {
 }
 
 kotlin {
-    android {
+    androidLibrary {
         namespace = "com.bilulo.currencypulse.ui"
         compileSdk = 37
         minSdk = 24

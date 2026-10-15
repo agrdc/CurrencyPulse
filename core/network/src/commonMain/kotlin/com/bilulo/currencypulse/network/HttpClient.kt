@@ -17,7 +17,7 @@ expect fun createHttpClient(): HttpClient
 /**
  * Common HTTP client configuration function.
  */
-fun configureHttpClientConfig(): HttpClientConfig<*>.() -> Unit = {
+fun HttpClientConfig<*>.configureHttpClient() {
     install(ContentNegotiation) {
         json(Json {
             ignoreUnknownKeys = true

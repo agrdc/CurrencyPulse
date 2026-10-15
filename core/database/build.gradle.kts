@@ -5,7 +5,7 @@ plugins {
 }
 
 kotlin {
-    android {
+    androidLibrary {
         namespace = "com.bilulo.currencypulse.database"
         compileSdk = 37
         minSdk = 24
@@ -23,13 +23,13 @@ kotlin {
             implementation(libs.androidx.room.runtime)
             implementation(libs.sqlite.bundled)
         }
-        
+
         androidMain.dependencies {
-            implementation(libs.androidx.room.runtime)
+            // Android-specific dependencies if needed
         }
-        
+
         iosMain.dependencies {
-            implementation(libs.androidx.room.runtime)
+            // iOS-specific dependencies if needed
         }
     }
 }
